@@ -7,16 +7,15 @@
     tools:context=".ui.notifications.NotificationsFragment">
 
     <TextView
-        android:id="@+id/notifi_coming_soon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginLeft="164dp"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="164dp"
-        android:layout_marginRight="164dp"
-        android:text="Coming soon"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/grad"
+        android:layout_width="40dp"
+        android:layout_height="732dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="false"
+        android:background="@drawable/gradients"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>

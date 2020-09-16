@@ -116,7 +116,7 @@ public class HomeFragment extends Fragment {
         try {
             JSONObject status = new JSONObject(response);
             statusLabel.setText(status.getString("state"));
-            brightnessLabel.setText(String.format("en.US", "%.0f percent", (status.getDouble("brightness") * 100)));
+            brightnessLabel.setText(String.format("%.0f percent", (status.getDouble("brightness") * 100)));
             int updateSlider = (int) ((float) status.getDouble("brightness") * 100);
             Log.e("set Slider", String.valueOf(updateSlider));
             brightnessSeek.setProgress(updateSlider, true);

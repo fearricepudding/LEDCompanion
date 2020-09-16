@@ -33,7 +33,7 @@ import java.nio.charset.StandardCharsets;
 public class MainActivity extends AppCompatActivity {
 
     // TODO This needs to be stored during app setup
-    final String apiAddress = "192.168.1.9";
+    final String apiAddress = "192.168.1.222";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(policy);
         URL url = null;
         try {
-            url = new URL("http://192.168.1.9:8080/"+path); // IP is temp for testing cri - should prob just have a virt device
+            url = new URL("http://"+apiAddress+":8080/"+path); // IP is temp for testing cri - should prob just have a virt device
             URLConnection con = url.openConnection();
             HttpURLConnection http = (HttpURLConnection)con;
             http.setRequestMethod(method);
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(policy);
         URL url = null;
         try {
-            url = new URL("http://192.168.1.9:8080/"+path); // IP is temp for testing cri - should prob just have a virt device
+            url = new URL("http://"+apiAddress+":8080/"+path); // IP is temp for testing cri - should prob just have a virt device
             URLConnection con = url.openConnection();
             HttpURLConnection http = (HttpURLConnection)con;
             http.setRequestMethod(method);
